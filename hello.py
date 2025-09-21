@@ -34,21 +34,48 @@ bootstrap = Bootstrap(app)
 moment = Moment(app)
 
 class NameForm (FlaskForm): 
-    name = StringField('What is your name?', validators=[DataRequired()]) 
+    name = StringField('What is your name?', validators=[DataRequired()])
+    email = StringField('What is your UofT email?', validators=[DataRequired()]) 
     submit = SubmitField('Submit')
 
 #Example 4-6
-@app.route('/', methods=['GET', 'POST']) 
-def index(): 
-    form = NameForm() 
-    if form.validate_on_submit(): 
-        old_name = session.get('name') 
-        if old_name is not None and old_name != form.name.data: 
-            flash('Looks like you have changed your name!') 
-        session['name'] = form.name.data 
-        return redirect(url_for('index')) 
+@app.route('/', methods=['GET', 'POST'])
+def index():
+    form = NameForm()
+
+    name = None
+    email = None
+
+    if form.validate_on_submit():
+        name = form.name.data
+        email = form.email.data
+
+        old_name = session.get('name')
+        old_email = session.get('email')
+
+        if old_name and old_name != name:
+            flash('Looks like you have changed your name!')
+
+        if old_email and old_email != email:
+            flash('Looks like you have changed your email!')
+
+        # Save name and email regardless of validity
+        session['name'] = name
+        session['email'] = email
+        session['submitted'] = True
+
+        return redirect(url_for('index'))
+
+    # Only show name/email if form was submitted this visit
+    name = session['name'] if session.get('submitted') else None
+    email = session['email'] if session.get('submitted') else None
+
     return render_template('index.html', current_time=datetime.utcnow(),
-        form = form, name = session.get('name'))
+                           form=form, name=name, email=email)
+
+
+
+
 
 #Example 3-13 
 #@app.route('/')

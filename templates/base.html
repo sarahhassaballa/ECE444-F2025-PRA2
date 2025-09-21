@@ -3,6 +3,12 @@
 
 {% block title %}Flasky{% endblock %}
 
+<!--Example 3-12-->
+{% block scripts %}
+{{ super() }}
+{{ moment.include_moment() }}
+{% endblock %}
+
 {% block navbar %}
 <div class="navbar navbar-inverse" role="navigation">
     <div class="container">

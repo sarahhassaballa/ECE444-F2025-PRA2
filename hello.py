@@ -16,17 +16,25 @@ if __name__ == '__main__':
 #Example 3-4
 from flask import Flask, render_template
 from flask_bootstrap import Bootstrap
+#Example 3-11
+from flask_moment import Moment
+#Example 3-13
+from datetime import datetime
+
+
 app = Flask(__name__)
 
 bootstrap = Bootstrap(app)
+moment = Moment(app)
 
+#Example 3-13
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index.html', current_time=datetime.utcnow())
 
 @app.route('/user/<name>')
 def user(name):
-    return render_template('user.html',name=name)
+    return render_template('user.html',name=name, current_time=datetime.utcnow())
     
 #Example 3-6
 @app.errorhandler(404)

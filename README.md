@@ -45,3 +45,4 @@ https://github.com/miguelgrinberg/flasky.
 ![Activity 2.4 Part 4](images/Activity_2.4_Part4.png)
 ### Activity 2.4 Part 5:
 ![Activity 2.4 Part 5](images/Activity_2.4_Part5.png)
+![Activity 2.4 Part 6](images/Activity_2.4_Docker_Image.png)

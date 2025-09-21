@@ -26,7 +26,6 @@ https://github.com/miguelgrinberg/flasky.
 ![Activity 1.4 Part 4](images/Activity_1.4_Part4.png)
 ### Activity 1.4 Part 5:
 ![Activity 1.4 Part 5](images/Activity_1.4_Part5.png)
-### Activity 1.4 Part 6:
 ![Activity 1.4 Part 6](images/Activity_1.4_Part6.png)
 
 ### Activity 2.1:
@@ -46,18 +45,3 @@ https://github.com/miguelgrinberg/flasky.
 ![Activity 2.4 Part 4](images/Activity_2.4_Part4.png)
 ### Activity 2.4 Part 5:
 ![Activity 2.4 Part 5](images/Activity_2.4_Part5.png)
-
-
-
-
-Flasky
-======
-
-This repository contains the source code examples for the second edition of my O'Reilly book [Flask Web Development](http://www.flaskbook.com).
-
-The commits and tags in this repository were carefully created to match the sequence in which concepts are presented in the book. Please read the section titled "How to Work with the Example Code" in the book's preface for instructions.
-
-For Readers of the First Edition of the Book
---------------------------------------------
-
-The code examples for the first edition of the book were moved to a different repository: [https://github.com/miguelgrinberg/flasky-first-edition](https://github.com/miguelgrinberg/flasky-first-edition).

@@ -73,10 +73,6 @@ def index():
     return render_template('index.html', current_time=datetime.utcnow(),
                            form=form, name=name, email=email)
 
-
-
-
-
 #Example 3-13 
 #@app.route('/')
 #def index():

@@ -3,6 +3,10 @@ Name: Sarah Hassaballa
 This repo is a clone of 
 https://github.com/miguelgrinberg/flasky.
 
+![Activity 1.1](images/Activity 1.1.png)
+
+
+
 
 Flasky
 ======

@@ -3,6 +3,7 @@ Name: Sarah Hassaballa
 This repo is a clone of 
 https://github.com/miguelgrinberg/flasky.
 
+## Activity 1.1: Initial Form Layout
 ![Activity 1.1](images/Activity_1.1.png)
 
 ![Activity 1.2](images/Activity_1.2.png)
